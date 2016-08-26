@@ -1,0 +1,3 @@
+#/bin/bash
+set -v
+go build $PACKAGE/...
