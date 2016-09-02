@@ -1,6 +1,5 @@
 FROM golang:alpine
-RUN apk add docker
-RUN service docker start
+RUN apk add --update git
 RUN go get -u github.com/stretchr/testify/... github.com/kardianos/govendor github.com/kisielk/errcheck github.com/golang/lint/golint
 RUN export PATH=$PATH:$GOPATH/bin
 COPY *.sh /root/
